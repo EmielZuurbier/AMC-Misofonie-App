@@ -1,0 +1,44 @@
+/*
+
+STYLESHEET FOR:     MISOFONIE APP
+AUTHOR:             EMIEL ZUURBIER / SJOERD RODERS / JELLE BOT
+CLIENT:             AMC
+EDUCATION:          CMD AMSTERDAM
+GITHUB REPO:        https://github.com/EmielZuurbier/AMC-Misofonie-App
+VERSION:            0.1.19.11.15
+
+*/
+
+
+
+
+/* ------------------------------------------------------------------------ GENERAL ----------------- */
+
+html,
+body { width: 100%; height: 100%; }
+body { overflow: hidden; }
+
+
+/* -------------------- NAV --------------------- */
+
+nav  { display: block; position: fixed; width: 320px; height: 100%; top: 0; left: -320px; background-color: #f7f7f7; z-index: 99; -webkit-transition: .5s; -moz-transition: .5s; -ms-transition: .5s; -o-transition: .5s; transition: .5s; }
+.nav-open { left: 0 !important; }
+.nav-header { display: block; width: 100%; height: auto; float: left; padding: 35px 25px 15px 25px; background-color: #e7e7e7; }
+.nav-header img { margin: 0 auto; }
+
+.nav-list { display: block; width: 100%; height: auto; float: left; padding: 15px 0px 35px 0px; }
+.nav-list ul { padding: 0; }
+.nav-list ul li { list-style: none; width: 100%; margin: 0 0 3px 0; }
+.nav-list ul li a { display: block; width: 100%; height: auto; padding: 15px; text-transform: uppercase; background-color: #e7e7e7; }
+
+.nav-button i { -webkit-transition: .5s; -moz-transition: .5s; -ms-transition: .5s; -o-transition: .5s; transition: .5s; cursor: pointer; }
+
+
+/* -------------------- MAIN -------------------- */
+
+main { display: block; position: relative; float: left; left: 0; width: 100%; height: 100%; -webkit-transition: .5s; -moz-transition: .5s; -ms-transition: .5s; -o-transition: .5s; transition: .5s; }
+.main-open { left: 320px !important; }
+main header { display: block; position: relative; width: 100%; height: auto; float: left; padding: 10px 25px; background-color: #f7f7f7; }
+
+
+/* -------------------------------------------------------------------- MEDIA QUERY ----------------- */
