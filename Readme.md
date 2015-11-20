@@ -14,7 +14,7 @@ Leden
 
 Changelog
 -----------
-20-11-2015
+20-11-2015  
 *homeController en testController data path veranderd*
 
 19-11-2015  
