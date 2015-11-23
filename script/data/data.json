@@ -4,6 +4,7 @@
     "author": "Emiel Zuurbier",
     "collection": {
         "home": "Home",
-        "test": "Test"
+        "test": "Test",
+        "info": "Info"
     }
 }
