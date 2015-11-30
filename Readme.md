@@ -21,6 +21,9 @@ Changelog
 - Scripts toegevoegd
 - Cards gemaakt
 - Animatie tussen Views
+- Stylesheet aangepast
+- Kloeren toegevoegd
+- Zo veel shit G
 
 20-11-2015  
 *homeController en testController data path veranderd*
