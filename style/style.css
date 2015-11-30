@@ -5,7 +5,7 @@ AUTHOR:             EMIEL ZUURBIER / SJOERD RODERS / JELLE BOT
 CLIENT:             AMC
 EDUCATION:          CMD AMSTERDAM
 GITHUB REPO:        https://github.com/EmielZuurbier/AMC-Misofonie-App
-VERSION:            0.1.19.11.15
+VERSION:            0.11.30.11.15
 
 */
 
@@ -15,30 +15,228 @@ VERSION:            0.1.19.11.15
 /* ------------------------------------------------------------------------ GENERAL ----------------- */
 
 html,
-body { width: 100%; height: 100%; }
-body { overflow: hidden; }
+body { 
+    width: 100%; 
+    height: 100%;
+}
+
+body { 
+    overflow-x: hidden;
+    background-color: #f7f7f7;
+    background-repeat: repeat;
+    background-size: 40px;
+}
 
 
 /* -------------------- NAV --------------------- */
 
-nav  { display: block; position: fixed; width: 320px; height: 100%; top: 0; left: -320px; background-color: #f7f7f7; z-index: 99; -webkit-transition: .5s; -moz-transition: .5s; -ms-transition: .5s; -o-transition: .5s; transition: .5s; }
-.nav-open { left: 0 !important; }
-.nav-header { display: block; width: 100%; height: auto; float: left; padding: 35px 25px 15px 25px; background-color: #e7e7e7; }
-.nav-header img { margin: 0 auto; }
+nav  { 
+    display: block; 
+    position: fixed; 
+    width: 250px; 
+    height: 100%; 
+    top: 0; 
+    left: -100%; 
+    background-color: #ffffff;
+    border-right: 1px solid #e7e7e7;
+    z-index: 2; 
+    opacity: 0; 
+    -webkit-transition: .5s; 
+    -moz-transition: .5s;
+    -ms-transition: .5s; 
+    -o-transition: .5s; 
+    transition: .5s; 
+}
 
-.nav-list { display: block; width: 100%; height: auto; float: left; padding: 15px 0px 35px 0px; }
-.nav-list ul { padding: 0; }
-.nav-list ul li { list-style: none; width: 100%; margin: 0 0 3px 0; }
-.nav-list ul li a { display: block; width: 100%; height: auto; padding: 15px; text-transform: uppercase; background-color: #e7e7e7; }
+.nav-open { 
+    left: 0;
+    z-index: 99 !important; 
+    opacity: 1 !important; 
+}
 
-.nav-button i { -webkit-transition: .5s; -moz-transition: .5s; -ms-transition: .5s; -o-transition: .5s; transition: .5s; cursor: pointer; }
+.nav-header { 
+    display: -webkit-box; 
+    display: -ms-flexbox; 
+    display: -webkit-flex; 
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: nowrap; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%; 
+    height: 34px; 
+    float: left; 
+    padding: 5px 15px 5px 15px; 
+    background-color: #f7f7f7;  
+}
 
+.nav-header img { 
+    display: block; 
+    margin: 0; 
+    height: 100%; 
+    float: left; 
+}
+
+.nav-header p { 
+    display: block; 
+    float: left; 
+    line-height: 1em; 
+    margin: 0; 
+    font-weight: 900; 
+    text-transform: uppercase;
+}
+
+.nav-list { 
+    display: block; 
+    width: 100%; 
+    height: auto; 
+    float: left; 
+    padding: 15px 0px 35px 0px;
+}
+
+.nav-list ul { 
+    padding: 0; 
+}
+
+.nav-list ul li { 
+    list-style: none; 
+    width: 100%; 
+    margin: 0 0 3px 0; 
+}
+
+.nav-list ul li a { 
+    display: block; 
+    width: 100%; 
+    height: auto; 
+    padding: 15px; 
+    text-transform: uppercase; 
+    text-align: center;
+}
+
+/* ------------------- HEADER -------------------- */
+
+body > header { 
+    display: block;
+    position: relative; 
+    width: 100%; 
+    height: auto; 
+    float: left; 
+    padding: 10px 25px; 
+    background-color: #f7f7f7; 
+}
+
+body > header i { 
+    float: right; 
+    -webkit-transition: .5s; 
+    -moz-transition: .5s; 
+    -ms-transition: .5s; 
+    -o-transition: .5s; 
+    transition: .5s; 
+    cursor: pointer; 
+}
 
 /* -------------------- MAIN -------------------- */
 
-main { display: block; position: relative; float: left; left: 0; width: 100%; height: 100%; -webkit-transition: .5s; -moz-transition: .5s; -ms-transition: .5s; -o-transition: .5s; transition: .5s; }
-.main-open { left: 320px !important; }
-main header { display: block; position: relative; width: 100%; height: auto; float: left; padding: 10px 25px; background-color: #f7f7f7; }
+main { 
+    display: block; 
+    position: relative; 
+    float: left; 
+    left: 0; 
+    width: 100%; 
+    height: auto; 
+    -webkit-transition: .5s; 
+    -moz-transition: .5s; 
+    -ms-transition: .5s; 
+    -o-transition: .5s; 
+    transition: .5s; 
+    z-index: 1; 
+}
 
+.main-open { 
+    left: 250px;
+}
+
+/* -------------------- VIEWS -------------------- */
+
+.view {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: auto;
+    float: left;
+    -webkit-transition: .5s; 
+    -moz-transition: .5s; 
+    -ms-transition: .5s; 
+    -o-transition: .5s; 
+    transition: .5s; 
+}
+
+.card {
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    padding: 10px 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #e7e7e7;
+    border-radius: 10px;
+}
+
+
+/* --------------------------------------------------------------------- ANIMATIONS ----------------- */
+
+.view.ng-leave { 
+    -webkit-animation: slideOut 0.5s both ease-in;
+    -moz-animation: slideOut 0.5s ease-in;
+    animation: slideOut 0.5s ease-in; 
+    z-index: 9999; 
+}
+
+.view.ng-enter { 
+    -webkit-animation: scaleIn 1s ease-in-out;
+    -moz-animation: scaleIn 1s ease-in-out; 
+    animation: scaleIn 1s ease-in-out;
+    z-index: 8888; 
+}
+
+@-webkit-keyframes scaleIn {
+    0%      { opacity: 0; -webkit-transform: scale(0.8); }
+    50%     { opacity: 0; -webkit-transform: scale(0.8); }
+    100%    { opacity: 1; -webkit-transform: scale(1); }
+}
+
+@-webkit-keyframes slideOut {
+    from    { opacity: 1; }
+    to      { opacity: 0; }
+/*
+    from    { -webkit-transform: translateX(0%); }
+    to      { -webkit-transform: translateX(-100%); }
+    
+*/
+}
+
+@keyframes scaleIn {
+    0%      { opacity: 0; -webkit-transform: scale(0.8); }
+    50%     { opacity: 0; -webkit-transform: scale(0.8); }
+    100%    { opacity: 1; -webkit-transform: scale(1); }
+}
+
+@keyframes slideOut {
+    from    { opacity: 1; }
+    to      { opacity: 0; }
+/*
+    from    { transform: translateX(0%); }
+    to      { transform: translateX(-100%); }
+    
+*/
+}
 
 /* -------------------------------------------------------------------- MEDIA QUERY ----------------- */
+
+
+
+
+
+
+

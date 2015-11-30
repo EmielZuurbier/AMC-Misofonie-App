@@ -7,15 +7,15 @@ app.config(function ($routeProvider) {
     $routeProvider
         .when('/', {
             controller: 'homeController',
-            templateUrl: 'views/home.html'
+            templateUrl: 'views/page-home.html'
         })
         .when('/test', {
             controller: 'testController',
-            templateUrl: 'views/test.html'
+            templateUrl: 'views/page-test.html'
         })
         .when('/info', {
             controller: 'infoController',
-            templateUrl: 'views/info.html'
+            templateUrl: 'views/page-info.html'
         })
         .otherwise({
             redirectTo: '/'

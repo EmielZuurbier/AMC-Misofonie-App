@@ -15,36 +15,35 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script> <!-- JQUERY UI -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <!-- BOOTSTRAP -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script> <!-- ANGULAR -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-animate.min.js"></script> <!-- ANGULAR ANIMATE -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script> <!-- ANGULAR ROUTE -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-animate.min.js"></script> <!-- ANGULAR ANIMATE -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-touch.min.js"></script> <!-- ANGULAR TOUCH -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script> <!-- D3 -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script> <!-- GREENSOCK -->
         <!-- ANGULAR MODULES -->
-        <script src="script/app.js"></script> <!-- MAIN MODULE -->
+        <script src="script/app.js"></script>                           <!-- MAIN MODULE -->
         <!-- ANGULAR SERVICES -->
-        <script src="script/services/service.js"></script>
+        <script src="script/services/service.js"></script>              <!-- DATA SERVICE -->
         <!-- ANGULAR CONTROLLERS -->
-        <script src="script/controllers/homeController.js"></script> <!-- HOME CONTROLLER -->
-        <script src="script/controllers/testController.js"></script> <!-- TEST CONTROLLER -->
-        <script src="script/controllers/infoController.js"></script> <!-- INFO CONTROLLER -->
+        <script src="script/controllers/homeController.js"></script>    <!-- HOME CONTROLLER -->
+        <script src="script/controllers/testController.js"></script>    <!-- TEST CONTROLLER -->
+        <script src="script/controllers/infoController.js"></script>    <!-- INFO CONTROLLER -->
     </head>
     
     <body data-ng-app="misofonieApp">
         
-        <nav> <!-- NAV -->
+        <nav>                                           <!-- NAV -->
             <div class="container-fluid">
                 <div class="row">
                     <div class="nav-header">
-                        <img class="img-responsive img-circle text-center" src="http://placehold.it/100x100" alt="profile"/>
-                        <h3 class="text-center">User</h3>
+                        <p class="nav-header-name">Patient X</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="nav-list">
                         <ul>
                             <li><a href="#/">Home</a></li>
-                            <li><a href="#test">Test</a></li>
+                            <li><a href="#test">Amiso</a></li>
                             <li><a href="#info">info</a></li>
                             <li><a href="#">item</a></li>
                             <li><a href="#">item</a></li>
@@ -54,16 +53,19 @@
             </div>
         </nav>
         
-        <main> <!-- MAIN -->
-            <header>
-                <div class="nav-button">
-                    <i class="fa fa-bars"></i>
-                </div>
-            </header>
-            <div data-ng-view></div> <!-- VIEW CONTAINER -->
+        <header>
+            <div id="nav-open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </header>
+        
+        <main>                                          <!-- MAIN -->
+            <div data-ng-view class="view"></div>       <!-- VIEW CONTAINER -->
         </main>
         
-        <script src="script/script.js"></script> <!-- CUSTOM SCRIPT -->
+        <script src="script/animation.js"></script>     <!-- ANIMATION SCRIPT -->
+        <script src="script/d3.js"></script>            <!-- D3 SCRIPT -->
+        <script src="script/script.js"></script>        <!-- CUSTOM SCRIPT -->
     </body>
     
 </html>
