@@ -71,10 +71,39 @@ a {
 .btn {
     background-color: #00baff;
     color: #f9f9f9;
+    border: 2px solid #00baff;
     border-radius: 0;
+}
+
+.btn:hover {
+    background-color: #f9f9f9;
+    color: #00baff;
+    border: 2px solid #00baff;
+}
+
+.btn-tall {
     padding-top: 30px;
     padding-bottom: 30px;
     text-transform: uppercase;
+}
+
+progress {
+    display: block;
+    width: 100%;
+    margin: 15px 0 0 0;
+    color: #00baff;
+}
+
+progress::-webkit-progress-value {
+    background: #00baff;
+}
+
+progress::-moz-progress-value {
+    background: #00baff;
+}
+
+progress::progress-value {
+    background: #00baff;
 }
 
 
@@ -184,17 +213,24 @@ nav  {
     left: 200px;
 }
 
-#nav-open {
+#nav-button {
     display: block;
     width: auto;
     height: auto;
+    float: left; 
 }
 
-#nav-open i { 
+#settings-button {
+    display: block;
+    width: auto;
+    height: auto;
+    float: right;
+}
+
+#nav-button i, #settings-button i { 
     color: #00baff;
     font-size: 1.5em;
     padding: 15px;
-    float: left; 
     cursor: pointer;
 }
 
@@ -290,8 +326,16 @@ main {
     margin: 0;
 }
 
+.card-header p i, .card-header h2 i, .card-header h3 i, .card-header h4 i {
+    color: #00baff;
+}
+
 .card-body {
     background-color: #f9f9f9;
+}
+
+.card-footer {
+    background-color: #f1f1f1;
 }
 
 .card-padding {

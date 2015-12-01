@@ -3,9 +3,11 @@
 var dataArray = [],
     i = 0;
 
-for (i; i > 20; i++) {
-    dataArray.push(Math.floor(Math.random));
+for (i; i < 20; i++) {
+    dataArray.push(Math.floor((Math.random() * 10) + 1));
 }
+
+console.log(dataArray);
 
 var width = 368,
     height = 184,

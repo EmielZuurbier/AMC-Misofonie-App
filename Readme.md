@@ -5,7 +5,7 @@ CMD Amsterdam
 Team 13  
 In opdracht van het AMC  
 
-**versie 0.11.30.11.15**
+**versie 0.12.01.12.15**
 
 Leden
 -----------
@@ -16,6 +16,13 @@ Leden
 
 Changelog
 -----------
+01-12-2015  
+- Style.css aangepast
+- Views aangepast
+- Views toegevoegd
+- Controllers toegevoegd
+- Directive toegevoegd
+
 30-11-2015
 - Views aangepast  
 - Scripts toegevoegd

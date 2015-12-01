@@ -6,3 +6,5 @@ $('#nav-open').click(function () {
     $('main').toggleClass('main-open');
     $('.header').toggleClass('header-open');
 });
+
+$('.card').draggable();

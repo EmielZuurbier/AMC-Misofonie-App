@@ -7,36 +7,43 @@
         <meta name="author" content="Emiel Zuurbier, Sjoerd Roders, Jelle Bot">
         <meta name="description" content="App voor Misofonie">
         <!-- STYLESHEETS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/> <!-- BOOTSTRAP -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>   <!-- BOOTSTRAP -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/> <!-- FONT AWESOME -->
-        <link rel="stylesheet" href="style/style.css"/> <!-- STYLESHEET -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css">              
+        <link rel="stylesheet" href="style/style.css"/>                                                         <!-- STYLESHEET -->
         <!-- SCRIPTS -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.js"></script> <!-- JQUERY -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script> <!-- JQUERY UI -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <!-- BOOTSTRAP -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script> <!-- ANGULAR -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script> <!-- ANGULAR ROUTE -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-animate.min.js"></script> <!-- ANGULAR ANIMATE -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-touch.min.js"></script> <!-- ANGULAR TOUCH -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script> <!-- D3 -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script> <!-- GREENSOCK -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.js"></script>                  <!-- JQUERY -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>         <!-- JQUERY UI -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>             <!-- BOOTSTRAP -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>          <!-- ANGULAR -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>    <!-- ANGULAR ROUTE -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-animate.min.js"></script>  <!-- ANGULAR ANIMATE -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-touch.min.js"></script>    <!-- ANGULAR TOUCH -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>       <!-- D3 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>              <!-- GREENSOCK -->
         <!-- ANGULAR MODULES -->
-        <script src="script/app.js"></script>                           <!-- MAIN MODULE -->
+        <script src="script/app.js"></script>                                                                   <!-- MAIN MODULE -->
         <!-- ANGULAR SERVICES -->
-        <script src="script/services/service.js"></script>              <!-- DATA SERVICE -->
+        <script src="script/services/service.js"></script>                                                      <!-- DATA SERVICE -->
+        <!-- ANGULAR DIRECTIVES -->
+        <script src="script/directives/d3Directive.js"></script>                                                <!-- D3 DIRECTIVE -->
         <!-- ANGULAR CONTROLLERS -->
-        <script src="script/controllers/homeController.js"></script>    <!-- HOME CONTROLLER -->
-        <script src="script/controllers/testController.js"></script>    <!-- TEST CONTROLLER -->
-        <script src="script/controllers/infoController.js"></script>    <!-- INFO CONTROLLER -->
+        <script src="script/controllers/homeController.js"></script>                                            <!-- HOME CONTROLLER -->
+        <script src="script/controllers/testController.js"></script>                                            <!-- TEST CONTROLLER -->
+        <script src="script/controllers/infoController.js"></script>                                            <!-- INFO CONTROLLER -->
+        <script src="script/controllers/dashboardController.js"></script>                                       <!-- DASHBOARD CONTROLLER -->
+        <script src="script/controllers/oefeningenController.js"></script>                                      <!-- OEFENINGEN CONTROLLER -->
+        <script src="script/controllers/communityController.js"></script>                                       <!-- COMMUNITY CONTROLLER -->
+        <script src="script/controllers/instellingenController.js"></script>                                    <!-- INSTELLINGEN CONTROLLER -->
     </head>
     
     <body data-ng-app="misofonieApp">
         
-        <nav>                                           <!-- NAV -->
+        <nav>                                                                                                   <!-- NAV -->
             <div class="container-fluid">
                 <div class="row">
                     <div class="nav-header">
-                        <p class="nav-header-name">Patient X</p>
+                        <p class="nav-header-name">Sjoerd Roders</p>
                     </div>
                 </div>
                 <div class="row">
@@ -56,18 +63,21 @@
         </nav>
         
         <header class="header">
-            <div id="nav-open">
+            <div id="nav-button">
                 <i class="fa fa-th"></i>
+            </div>
+            <div id="settings-button">
+                <i class="fa fa-cog"></i>
             </div>
         </header>
         
-        <main>                                          <!-- MAIN -->
-            <div data-ng-view class="view"></div>       <!-- VIEW CONTAINER -->
+        <main>                                                                                                  <!-- MAIN -->
+            <div data-ng-view class="view"></div>                                                               <!-- VIEW CONTAINER -->
         </main>
         
-        <script src="script/animation.js"></script>     <!-- ANIMATION SCRIPT -->
-        <script src="script/d3.js"></script>            <!-- D3 SCRIPT -->
-        <script src="script/script.js"></script>        <!-- CUSTOM SCRIPT -->
+        <script src="script/animation.js"></script>                                                             <!-- ANIMATION SCRIPT -->
+        <script src="script/d3.js"></script>                                                                    <!-- D3 SCRIPT -->
+        <script src="script/script.js"></script>                                                                <!-- CUSTOM SCRIPT -->
     </body>
     
 </html>
