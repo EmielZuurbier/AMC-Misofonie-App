@@ -7,7 +7,7 @@ for (i; i < 20; i++) {
     dataArray.push(Math.floor((Math.random() * 10) + 1));
 }
 
-console.log(dataArray);
+//console.log(dataArray);
 
 var width = 368,
     height = 184,
@@ -22,7 +22,7 @@ var graph = d3.selectAll('#graph').append('svg')
 
 var yScale = d3.scale.linear()
     .domain([0, d3.max(dataArray)])
-    .range([0, height]),
+    .range([0, 150]),
 
     xScale = d3.scale.ordinal()
     .domain(d3.range(0, dataArray.length))

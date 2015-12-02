@@ -16,6 +16,11 @@ Leden
 
 Changelog
 -----------
+02-12-2015  
+- Style van cards aangepast
+- Instellingen toegevoegd
+- Navigatie elementen toegevoegd
+
 01-12-2015  
 - Style.css aangepast
 - Views aangepast
