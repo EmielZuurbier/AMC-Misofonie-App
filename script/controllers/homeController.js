@@ -14,21 +14,16 @@ app.controller('homeController', ['$scope', 'content',  function ($scope, conten
         height = 220,
         radius = 100,
         colors = ['#00baff', '#0398d0', '#0275a0'],
+        i = 0,
 
-        piedata = [
-            {
-                label: "Barot",
-                value: 53
-            }, {
-                label: "Gerard",
-                value: 37
-            }, {
-                label: "Jennifer",
-                value: 14
-            }
-        ],
+        piedata = [];
+    
+    for (i; i < 3; i += 1) {
+        piedata.push({ label: "Emiel", value: Math.floor(Math.random() * 100)});
+    }
+        
 
-        pie = d3.layout.pie()
+    var pie = d3.layout.pie()
             .value(function (d) {
                 return d.value;
             }),
@@ -64,6 +59,10 @@ app.controller('homeController', ['$scope', 'content',  function ($scope, conten
             return arc(i(t));
         };
     }
+    
+    
+    
+    console.log(piedata);
         
 
 

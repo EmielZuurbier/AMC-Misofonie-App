@@ -16,6 +16,9 @@ Leden
 
 Changelog
 -----------
+07-12-2015  
+- JSON files toegevoegd
+
 02-12-2015  
 - Style van cards aangepast
 - Instellingen toegevoegd
