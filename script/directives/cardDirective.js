@@ -7,8 +7,8 @@ app.directive("cards", function () {
 		scope: {},
         templateUrl: "script/directives/card.html",
         link: function (scope, element, attrs) {
-            scope.addCard = function () {
-                
+            scope.addCards = function () {
+                console.log("hello");
             };
         }
     };
