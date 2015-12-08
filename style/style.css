@@ -77,9 +77,9 @@ a {
 }
 
 .btn:hover {
-    background-color: #f9f9f9;
-    color: #00baff;
-    border: 2px solid #00baff;
+    background-color: #0398d0;
+    color: #f9f9f9;
+    border: 2px solid #0398d0;
 }
 
 .btn-tall {
@@ -195,18 +195,20 @@ nav.open {
 
 .header { 
     display: block;
-    position: relative; 
+    position: fixed; 
     width: 100%; 
     height: auto; 
     float: left; 
     left: 0px;
-    background-color: #ffffff; 
+    margin-bottom: 10px;
+    background-color: #00baff; 
     border-bottom: 1px solid #f1f1f1;
     -webkit-transition: .5s; 
     -moz-transition: .5s; 
     -ms-transition: .5s; 
     -o-transition: .5s; 
     transition: .5s; 
+    z-index: 2;
 }
 
 .header.open {
@@ -230,7 +232,7 @@ nav.open {
 }
 
 #nav-button i, #settings-button i { 
-    color: #00baff;
+    color: #f9f9f9;
     font-size: 1.5em;
     padding: 15px;
     cursor: pointer;
@@ -256,7 +258,7 @@ nav.open {
     position: absolute;
     height: 3px;
     width: 100%;
-    background: #00baff;;
+    background: #f9f9f9;;
     border-radius: 9px;
     opacity: 1;
     left: 0;
@@ -329,6 +331,7 @@ main {
     left: 0; 
     width: 100%; 
     height: auto; 
+    margin-top: 60px;
     -webkit-transition: .5s; 
     -moz-transition: .5s; 
     -ms-transition: .5s; 
@@ -339,6 +342,94 @@ main {
 
 main.open { 
     left: 200px;
+}
+
+.context-button {
+    display: block;
+    position: fixed;
+    bottom: 50px;
+    right: 15px;
+    z-index: 4;
+}
+
+.context-button-icon {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: #00baff;
+    border-radius: 50%;
+    padding: 19px 20px;
+    box-shadow: 0px 2px 4px #0398d0;
+    cursor: pointer;
+    z-index: 6;
+}
+
+.context-button-icon i {
+    font-size: 25px;
+    color: #f9f9f9;
+    transform-origin: 50% 50%;
+}
+
+.context-button-option {
+    display: block;
+    width: 200px;
+    padding: 0;
+    background-color: #00baff;
+    position: absolute;
+    right: 0px;
+    bottom: 60px;
+    opacity: 1;
+    z-index: 5;
+    box-shadow: 0px 2px 4px #0398d0;
+    border-radius: 5px;
+    -webkit-transition: .5s; 
+    -moz-transition: .5s; 
+    -ms-transition: .5s; 
+    -o-transition: .5s; 
+    transition: .5s; 
+}
+
+.context-button-option::after {
+    position: absolute;
+    bottom: -8px;
+    right: 22px;
+    content: " ";
+    width: 0; 
+	height: 0; 
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-top: 8px solid #00baff;
+}
+
+.context-button-option.ng-hide-add, .context-button-option.ng-hide-remove {
+    -webkit-transition: .5s; 
+    -moz-transition: .5s; 
+    -ms-transition: .5s; 
+    -o-transition: .5s; 
+    transition: .5s; 
+}
+
+.context-button-option.ng-hide {
+    opacity: 0;
+    bottom: 40px;
+}
+
+.context-button-option li {
+    list-style: none;
+}
+
+.context-button-option li:nth-of-type(even) {
+    background-color: #0398d0;
+}
+
+.context-button-option button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    color: #f9f9f9;
+    background: transparent;
+    border: 0;
+    text-align: left;
 }
 
 /* -------------------- VIEWS -------------------- */
@@ -358,6 +449,7 @@ main.open {
 
 .card {
     display: block;
+    position: relative;
     width: 100%;
     height: auto;
     min-height: 5px;
@@ -367,10 +459,6 @@ main.open {
 /*    border: 1px solid #f1f1f1;*/
     float: left;
     box-shadow: 0px 1px 8px #d6d6d6;
-}
-
-.card:first-of-type {
-    margin-top: 15px;
 }
 
 .card-left {
@@ -462,6 +550,20 @@ main.open {
 
 .card-padding {
     padding: 10px 15px;
+}
+
+.card-add {
+    position: relative;
+    background-color: #f1f1f1;
+    height: 100px;
+}
+
+.card-add i {
+    font-size: 50px;
+    color: #d7d7d7;
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc(50% - 25px);
 }
 
 .card-image {

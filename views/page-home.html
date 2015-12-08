@@ -58,16 +58,41 @@
                 </div>
             </div>
             
+            
+            <div data-ng-repeat="card in cardsActive track by $index">
+                <div data-ng-include="card.url"></div>
+            </div>
+            
+            
+<!--
             <div class="card">
                 <div class="card-header">
-                    <h2><i class="fa fa-list"></i> Tabs</h2>
+                    <h2><i class="fa fa-list"></i> Add card</h2>
                     <a class="card-ellips" href="javascript:void()"><i class="fa fa-ellipsis-v"></i></a>
                 </div>
-                <div class="card-body">
-                   
+                <div class="card-body card-add">
+                    <i class="fa fa-plus"></i>
+                    <select ng-model="template" ng-options="t.name for t in cards">
+                        <option value="">(blank)</option>
+                    </select>
+                    url of the template: <code>{{template.url}}</code>
+                    <hr/>
                 </div>
             </div>
+            
+            <div data-ng-include="template.url" autoscroll></div>
+-->
             
         </div>
     </div>
 </div>
+
+<div class="context-button">
+    <div data-ng-click="contextShow=!contextShow" class="context-button-icon">
+        <i class="fa fa-plus"></i>
+    </div>
+    <ul data-ng-show="contextShow" class="context-button-option" >
+        <li data-ng-repeat="card in cards"><button data-ng-click="addCard({{$index}})" data-ng-class="{{ card.name }}button">{{ card.name }}</button></li>
+    </ul>
+</div>
+

@@ -5,6 +5,11 @@ $('#nav-button').click(function () {
     $('nav, main, .header, #nav-icon').toggleClass('open');
 });
 
+$('#context-click').click(function () {
+    "use strict";
+    $('.context-button-option').toggleClass('pressed');
+});
+
 $('.card').draggable({
     axis: 'y',
     cursor: 'move',
