@@ -8,7 +8,7 @@ $('#nav-button').click(function () {
 });
 
 $('.card').draggable({
-    axis: 'x',
+    axis: 'y',
     cursor: 'move',
     distance: 20,
     snap: '.snap',
@@ -16,27 +16,3 @@ $('.card').draggable({
     snapMode: 'inner',
     containment: 'parent'
 });
-
-//var settings = {
-//    testCard: true,
-//    resultCard: true,
-//    excerciseCard: true
-//};
-//
-//if (settings.testCard === true) {
-//    return;
-//} else {
-//    return;
-//}
-//
-//if (settings.testCard === true) {
-//    return;
-//} else {
-//    return;
-//}
-//
-//if (settings.testCard === true) {
-//    return;
-//} else {
-//    return;
-//}
