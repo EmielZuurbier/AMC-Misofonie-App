@@ -22,9 +22,6 @@ Changelog
 - Add button toegevoegd
 - Styling aangepast
 - controllers aangepast
-
-
-09-12-2015  
 - Nieuwe branch toegevoegd
 
 07-12-2015  
