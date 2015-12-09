@@ -80,6 +80,9 @@ a {
     background-color: #0398d0;
     color: #f9f9f9;
     border: 2px solid #0398d0;
+    background-color: #0275a0;
+    color: #f9f9f9;
+    border: 2px solid #0275a0;
 }
 
 .btn-tall {
@@ -222,6 +225,11 @@ nav.open {
     float: left; 
     padding: 15px 15px 0 15px;
     position: relative;
+    width: 50px;
+    height: 50px;
+    float: left; 
+    padding: 15px;
+    cursor: pointer;
 }
 
 #settings-button {
@@ -233,6 +241,7 @@ nav.open {
 
 #nav-button i, #settings-button i { 
     color: #f9f9f9;
+    color: #ffffff;
     font-size: 1.5em;
     padding: 15px;
     cursor: pointer;
@@ -251,6 +260,7 @@ nav.open {
     -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
     cursor: pointer;
+    position: relative;
 }
 
 #nav-icon span {
@@ -262,6 +272,9 @@ nav.open {
     border-radius: 9px;
     opacity: 1;
     left: 0;
+    width: 50%;
+    background: #ffffff;
+    opacity: 1;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -272,8 +285,6 @@ nav.open {
     transition: .25s ease-in-out;
 }
 
-#nav-icon {
-}
 
 #nav-icon span:nth-child(1) {
     top: 0px;
@@ -320,6 +331,76 @@ nav.open {
     transform: rotate(-45deg);
     top: 15px;
     left: 8px;
+}
+
+#nav-icon span:nth-child(even) {
+  left: 50%;
+  border-radius: 0 9px 9px 0;
+}
+
+#nav-icon span:nth-child(odd) {
+  left:0px;
+  border-radius: 9px 0 0 9px;
+}
+
+#nav-icon span:nth-child(1), #nav-icon span:nth-child(2) {
+  top: 0px;
+}
+
+#nav-icon span:nth-child(3), #nav-icon span:nth-child(4) {
+  top: 8px;
+}
+
+#nav-icon span:nth-child(5), #nav-icon span:nth-child(6) {
+  top: 16px;
+}
+
+#nav-icon.open span {
+    width: calc(50% + 1px);
+}
+
+#nav-icon.open span:nth-child(1),#nav-icon.open span:nth-child(6) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#nav-icon.open span:nth-child(2),#nav-icon.open span:nth-child(5) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#nav-icon.open span:nth-child(1) {
+    left: 1px;
+    top: 4px;
+}
+
+#nav-icon.open span:nth-child(2) {
+    left: calc(50% - 1px);
+    top: 4px;
+}
+
+#nav-icon.open span:nth-child(3) {
+    left: -50%;
+    opacity: 0;
+}
+
+#nav-icon.open span:nth-child(4) {
+    left: 100%;
+    opacity: 0;
+}
+
+#nav-icon.open span:nth-child(5) {
+    left: 1px;
+    top: 12px;
+}
+
+#nav-icon.open span:nth-child(6) {
+    left: calc(50% - 1px);
+    top: 12px;
 }
 
 /* -------------------- MAIN -------------------- */

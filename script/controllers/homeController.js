@@ -89,9 +89,6 @@ app.controller('homeController', ['$scope', 'content',  function ($scope, conten
         };
     }
 
-        
-
-
 
     
 //    var dataArray = [],
