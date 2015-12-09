@@ -1,26 +1,20 @@
+<div class="custom-card-profile">
+    <div class="card-body">
+        <img class="card-image card-image-round" src="http://placehold.it/100x100"/>
+        <h2>{{ settings[0].firstName }} {{ settings[0].lastName }}</h2>
+        <p>dagen app gebruikt: 30 | oefeningen voltooid: 26</p>
+    </div>
+</div>
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
-            
-            <div class="card">
-                <div class="card-body">
-                    <div class="card-body-left card-padding">
-                        <img class="card-image card-image-round" src="http://placehold.it/100x100"/>
-                    </div>
-                    <div class="card-body-right">
-                        <h2>John Doe</h2>
-                        <p>johndoe@email.com</p>
-                    </div>
-                </div>
-            </div>
+        <div class="col-md-12">                
             <div class="card">
                 <div class="card-header">
                     <h3>Gegevens</h3>
                 </div>
                 <div class="card-body card-padding">
-                    <p>Naam: Jan Hertogh</p>
-                    <p>Email: jan@janhertogh.nl</p>
-                    <p>Wachtwoord: &#8226;&#8226;&#8226;&#8226;&#8226;&#8226;</p>
+                    <p>Naam: {{ settings[0].firstName }} {{ settings[0].lastName }}</p>
+                    <p>Email: {{ settings[0].emailAdress }}</p>
                 </div>
             </div>
             <form role="form" class="form-horizontal">
@@ -45,25 +39,27 @@
                         <h5>Vergeleken met anderen ben ik gevoelig voor:</h5>
                         <fieldset>
                             <div class="checkbox">
-                                <label><input type="checkbox" value="eetgeluiden"> Eetgeluiden</label>
+                                <label><input name="geluidencheck" type="checkbox" value="eetgeluiden" ng-model="settings[0].instellingen.geluiden.eetgeluiden">  Eetgeluiden</label><span ng-if="checked" class="animate-if">
+  This is removed when the checkbox is unchecked.
+</span>
                             </div>
                             <div class="checkbox">
-                                <label><input type="checkbox" value="nasalegeluiden"> Nasale geluiden</label>
+                                <label><input name="geluidencheck" type="checkbox" value="nasalegeluiden" ng-model="settings[0].instellingen.geluiden.nasaleGeluiden"> Nasale geluiden</label>
                             </div>
                             <div class="checkbox">
-                                <label><input type="checkbox" value="keelgeluiden"> Keelgeluiden</label>
+                                <label><input name="geluidencheck" type="checkbox" value="keelgeluiden" ng-model="settings[0].instellingen.geluiden.keelgeluiden"> Keelgeluiden</label>
                             </div>
                             <div class="checkbox">
-                                <label><input type="checkbox" value="klankgeluiden"> Bepaalde klanken</label>
+                                <label><input name="geluidencheck" type="checkbox" value="klankgeluiden" ng-model="settings[0].instellingen.geluiden.bepaaldeKlanken"> Bepaalde klanken</label>
                             </div>
                             <div class="checkbox">
-                                <label><input type="checkbox" value="tikgeluiden"> Herhaaldelijk tikken</label>
+                                <label><input name="geluidencheck" type="checkbox" value="tikgeluiden" ng-model="settings[0].instellingen.geluiden.herhaaldelijkTikken"> Herhaaldelijk tikken</label>
                             </div>
                             <div class="checkbox">
-                                <label><input type="checkbox" value="geritselgeluiden"> Geritsel</label>
+                                <label><input name="geluidencheck" type="checkbox" value="geritselgeluiden" ng-model="settings[0].instellingen.geluiden.geritsel"> Geritsel</label>
                             </div>
                             <div class="checkbox">
-                                <label><input type="checkbox" value="Omgevingsgeluiden"> Omgevingsgeluiden</label>
+                                <label><input name="geluidencheck" type="checkbox" value="Omgevingsgeluiden" ng-model="settings[0].instellingen.geluiden.omgevingsgeluiden"> Omgevingsgeluiden</label>
                             </div>
                         </fieldset>
                         <br>

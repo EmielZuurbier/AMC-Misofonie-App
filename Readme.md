@@ -23,6 +23,8 @@ Changelog
 - Styling aangepast
 - controllers aangepast
 - Nieuwe branch toegevoegd
+- settings controller aangepast
+- settings.json aangevuld
 
 07-12-2015  
 - JSON files toegevoegd

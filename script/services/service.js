@@ -1,8 +1,8 @@
 /*global app*/
 
-app.factory('content', ['$http', function ($http) {
+app.factory('settings', ['$http', function($http) {
     "use strict";
-    return $http.get('/script/data/library.json')
+    return $http.get('/script/data/settings.json')
             .success(function (data) {
             return data;
         })

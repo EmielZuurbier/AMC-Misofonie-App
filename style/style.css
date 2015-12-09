@@ -205,13 +205,12 @@ nav.open {
     left: 0px;
     margin-bottom: 10px;
     background-color: #00baff; 
-    border-bottom: 1px solid #f1f1f1;
     -webkit-transition: .5s; 
     -moz-transition: .5s; 
     -ms-transition: .5s; 
     -o-transition: .5s; 
     transition: .5s; 
-    z-index: 2;
+    z-index: 1;
 }
 
 .header.open {
@@ -660,12 +659,45 @@ main.open {
 
 .card-image-round {
     border-radius: 50%;
+    width: 100px;
+    height: 100px;
 }
 
 form .card:first-of-type {
     margin-top: 5px;
 }
 
+/* ------------------------------- CUSTOM CARD --------------------------- */
+
+.custom-card-profile {
+    margin-top: -9px;
+}
+
+.custom-card-profile .card-body{
+    background-color: #00baff;
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 10px;
+}
+
+.custom-card-profile .card-body * {
+    align-self: center;
+    color: #fff;
+}
+
+.custom-card-profile .card-body h2 {
+    font-size: 1.5em;
+}
+
+.custom-card-profile .card-body p {
+    font-size: 0.9em;
+}
+
+.custom-card-profile .card-body img {
+    margin-top: 10px;
+    z-index: 100;
+    border: 5px solid #fff;
+}
 
 /* ------------------------------- FORM ---------------------------------- */
 
