@@ -6,6 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="author" content="Emiel Zuurbier, Sjoerd Roders, Jelle Bot">
         <meta name="description" content="App voor Misofonie">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="app-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
         <!-- STYLESHEETS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>   <!-- BOOTSTRAP -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/> <!-- FONT AWESOME -->
@@ -26,7 +30,7 @@
         <!-- ANGULAR SERVICES -->
         <script src="script/services/service.js"></script>                                                      <!-- DATA SERVICE -->
         <!-- ANGULAR DIRECTIVES -->
-        <script src="script/directives/d3Directive.js"></script>                                                <!-- D3 DIRECTIVE -->
+        <script src="script/directives/cardDirective.js"></script>                                                <!-- D3 DIRECTIVE -->
         <!-- ANGULAR CONTROLLERS -->
         <script src="script/controllers/homeController.js"></script>                                            <!-- HOME CONTROLLER -->
         <script src="script/controllers/testController.js"></script>                                            <!-- TEST CONTROLLER -->
@@ -64,7 +68,14 @@
         
         <header class="header">
             <div id="nav-button">
-                <i class="fa fa-th"></i>
+                <div id="nav-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
             <div id="settings-button">
                 <a href="#instellingen"><i class="fa fa-cog"></i></a>

@@ -2,7 +2,7 @@
 
 app.factory('content', ['$http', function ($http) {
     "use strict";
-    return $http.get('/script/data/data.json')
+    return $http.get('/script/data/library.json')
             .success(function (data) {
             return data;
         })

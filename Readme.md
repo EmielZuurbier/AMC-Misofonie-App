@@ -18,7 +18,10 @@ Changelog
 -----------
 
 
-Hello World!  
+09-12-2015  
+- Add button toegevoegd
+- Styling aangepast
+- controllers aangepast
 
 
 09-12-2015  
