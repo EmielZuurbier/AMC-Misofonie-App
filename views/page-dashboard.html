@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            
+            <!-- REPEAT CARDSACTIVE -->
+            <div class="card-view" data-ng-repeat="card in cardsActive track by $index" >
+                <div data-ng-include="card.url"></div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="context-button">
+    <div data-ng-click="contextShow=!contextShow" class="context-button-icon">
+        <i class="fa fa-plus"></i>
+    </div>
+    <ul data-ng-show="contextShow" class="context-button-option" >
+        <li data-ng-repeat="card in cards">
+            <button data-ng-click="addCard({{$index}})" data-ng-class="{{ card.classcard }}button">{{ card.name }}</button>
+        </li>
+    </ul>
+</div>

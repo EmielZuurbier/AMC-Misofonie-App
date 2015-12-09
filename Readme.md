@@ -17,6 +17,12 @@ Leden
 Changelog
 -----------
 
+09-12-2015  
+- New card templates
+- Chart.js implemented
+- home & dashboardController edited
+- Added animations to card add and remove
+- Added dashboard page
 
 09-12-2015  
 - Add button toegevoegd

@@ -1,6 +1,6 @@
 /*global angular*/
 
-var app = angular.module('misofonieApp', ['ngRoute', 'ngAnimate', 'ngTouch']);
+var app = angular.module('misofonieApp', ['ngRoute', 'ngAnimate', 'ngTouch', 'chart.js']);
 
 app.config(function ($routeProvider) {
     "use strict";

@@ -205,7 +205,7 @@ nav.open {
     left: 0px;
     margin-bottom: 10px;
     background-color: #00baff; 
-    border-bottom: 1px solid #f1f1f1;
+/*    border-bottom: 1px solid #f1f1f1;*/
     -webkit-transition: .5s; 
     -moz-transition: .5s; 
     -ms-transition: .5s; 
@@ -243,7 +243,7 @@ nav.open {
     color: #f9f9f9;
     color: #ffffff;
     font-size: 1.5em;
-    padding: 15px;
+    padding: 14px 15px;
     cursor: pointer;
 }
 
@@ -470,7 +470,7 @@ main.open {
     box-shadow: 0px 1px 8px #d6d6d6;
 }
 
-.card-left {
+.card-half:nth-of-type(odd) {
     display: block;
     width: calc(50% - 7.5px);
     height: auto;
@@ -483,7 +483,7 @@ main.open {
     box-shadow: 0px 1px 8px #d6d6d6;
 }
 
-.card-right {
+.card-half:nth-of-type(even) {
     display: block;
     width: calc(50% - 7.5px);
     height: auto;
@@ -664,6 +664,32 @@ form {
     -moz-animation: scaleIn 1s ease-in-out; 
     animation: scaleIn 1s ease-in-out;
     z-index: 8888; 
+}
+
+.card-view.ng-enter {
+    opacity: 0;
+    -webkit-transition: .5s; 
+    -moz-transition: .5s; 
+    -ms-transition: .5s; 
+    -o-transition: .5s; 
+    transition: .5s; 
+}
+
+.card-view.ng-enter-active {
+    opacity: 1;
+}
+
+.card-view.ng-leave {
+    opacity: 1;
+    -webkit-transition: .5s; 
+    -moz-transition: .5s; 
+    -ms-transition: .5s; 
+    -o-transition: .5s; 
+    transition: .5s; 
+}
+
+.card-view.ng-leave-active {
+    opacity: 0;
 }
 
 @-webkit-keyframes scaleIn {
