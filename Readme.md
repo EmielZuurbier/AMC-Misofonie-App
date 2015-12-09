@@ -24,6 +24,9 @@ Changelog
 - controllers aangepast
 
 
+09-12-2015  
+- Nieuwe branch toegevoegd
+
 07-12-2015  
 - JSON files toegevoegd
 
