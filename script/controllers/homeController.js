@@ -6,8 +6,37 @@ app.controller('homeController', ['$scope', 'content',  function ($scope, conten
         $scope.content = data.collection;
     });
     
-    $scope.title = "Home";
+    // ACTIEVE CARDS
+    $scope.cardsActive = [];
+    
+    // SELECTIE VAN CARDS
+    $scope.cards = 
+        [
+            { name: 'Info', url: 'script/directives/cardInfo.html' },
+            { name: 'Oefening', url: 'script/directives/cardExercise.html' },
+            { name: 'Resultaat', url: 'script/directives/cardResult.html' }
+        ];
+    
+    // VOEG CARD TOE AAN HOME
+    $scope.addCard = function ($index) {
+        $scope.cardsActive.push($scope.cards[$index]);
+        console.log($scope.cardsActive);
+    };
+    
+    // VERWIJDER CARD VAN HOME
+    $scope.removeCard = function ($index) {
+        $scope.cardsActive.splice($index, 1);
+        console.log($scope.cardsActive);
+    }
 
+    
+    
+    
+    
+    
+    
+    
+    
     /* ----------------------- D3 GRAPH -------------------------- */
     
     var width = $('#graph').innerWidth(),
@@ -59,21 +88,11 @@ app.controller('homeController', ['$scope', 'content',  function ($scope, conten
             return arc(i(t));
         };
     }
-    
-    
-    
-    console.log(piedata);
+
         
 
 
 
-
-
-
-
-
-    
-    
     
 //    var dataArray = [],
 //        i = 0;
