@@ -4,12 +4,12 @@
             
             <div class="card">
                 <div class="card-header blue">
-                    <h2>Dashboard</h2>
+                    <h2>Bibliotheek</h2>
                 </div>
             </div>
             
             <!-- REPEAT CARDSACTIVE -->
-            <div class="card-view" data-ng-repeat="card in cardsActive track by $index" >
+            <div class="card-view" data-ng-repeat="card in cards | filter: { category: 'Oefening' } track by $index" >
                 <div data-ng-include="card.url"></div>
             </div>
             
@@ -22,7 +22,7 @@
         <i class="fa fa-plus"></i>
     </div>
     <ul data-ng-show="contextShow" class="context-button-option" >
-        <li data-ng-repeat="card in cards | filter: { category: 'Graph' }">
+        <li data-ng-repeat="card in cards | filter: { category: 'Oefening' }">
             <button data-ng-click="addCard({{$index}})" data-ng-class="{{ card.classcard }}button">{{ card.name }}</button>
         </li>
     </ul>

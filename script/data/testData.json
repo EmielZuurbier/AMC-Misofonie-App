@@ -1,0 +1,63 @@
+{
+    "lineLabels": 
+    [
+        "Januari",
+        "Februari", 
+        "Maart", 
+        "April", 
+        "Mei", 
+        "Juni", 
+        "Juli"
+    ],
+    
+    "lineSeries": 
+    [
+        "Stress",
+        "Oefeningen"
+    ],
+    
+    "lineData":
+    [
+        [65, 59, 80, 81, 56, 55, 40],
+        [28, 48, 40, 19, 86, 27, 90]
+    ],
+    
+    "barData":
+    [
+        [65, 59, 80, 81, 56, 55, 40],
+        [28, 48, 40, 19, 86, 27, 90]
+    ],
+    
+    "barLabels": 
+    [
+        "Januari",
+        "Februari", 
+        "Maart", 
+        "April", 
+        "Mei", 
+        "Juni", 
+        "Juli"
+    ],
+    
+    "barSeries": 
+    [
+        "Stress",
+        "Oefeningen"
+    ],
+    
+    "pieData":
+    [
+        10, 
+        40,
+        10,
+        60
+    ],
+    
+    "pieLabels":
+    [
+        "Kalm",
+        "Walging",
+        "Stress",
+        "Woede"
+    ]
+}

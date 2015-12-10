@@ -1,38 +1,60 @@
 {
-    "categorie": {
-        "audio": [
-            {
-                "titel": "",
-                "content": ""
-            },
-            {
-                "titel": "",
-                "content": ""
-            }
-        ],
-        "beweging": [
-            {
-                "titel": "",
-                "content": ""
-            }
-        ],
-        "visueel": [
-            {
-                "titel": "",
-                "content": ""
-            }
-        ],
-        "massage": [
-            {
-                "titel": "",
-                "content": ""
-            }
-        ],
-        "meditatie": [
-            {
-                "titel": "",
-                "content": ""
-            }
-        ]
-    }
+    "cards": [
+        { 
+            "name": "Stress test",
+            "classcard": "test-",
+            "url": "views/cards/cardTest.html",
+            "category": "Test",
+            "active": "true"
+        },
+        { 
+            "name": "Info",
+            "classcard": "info-",
+            "url": "views/cards/cardInfo.html",
+            "category": "Info",
+            "active": "true"
+        },
+        { 
+            "name": "Info Klein", 
+            "classcard": "info-half-",
+            "url": "views/cards/cardInfo2.html",
+            "category": "Info",
+            "active": "true"
+        },
+        { 
+            "name": "Oefening", 
+            "classcard": "oefening-",
+            "url": "views/cards/cardExercise.html",
+            "category": "Oefening",
+            "active": "true"
+        },
+        { 
+            "name": "Grafiek Line", 
+            "classcard": "result-", 
+            "url": "views/cards/cardResultLine.html",
+            "category": "Graph",
+            "active": "true"
+        },
+        { 
+            "name": "Grafiek Klein", 
+            "classcard": "result-half-",
+            "url": "views/cards/cardResult2.html",
+            "category": "Graph",
+            "active": "true"
+        },
+        { 
+            "name": "Grafiek Pie", 
+            "classcard": "result-", 
+            "url": "views/cards/cardResultPie.html",
+            "category": "Graph",
+            "active": "true"
+        },
+        {
+            "name": "Grafiek Bar", 
+            "classcard": "result-", 
+            "url": "views/cards/cardResultBar.html",
+            "category": "Graph",
+            "active": "true"
+        }
+    ]
 }

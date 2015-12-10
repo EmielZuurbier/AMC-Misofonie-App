@@ -1,23 +1,28 @@
 /*global app, console, confirm, data*/
 
-app.controller('dashboardController', ['$scope', 'content',  function ($scope, content) {
+app.controller('dashboardController', ['$scope', 'cards', 'testData',  function ($scope, cards, testData) {
     "use strict";
-    content.success(function (data) {
-        $scope.content = data.collection;
+    cards.success(function (data) {
+        $scope.cards = data.cards;
+    });
+    testData.success(function (data) {
+        $scope.lineLabels = data.lineLabels;
+        $scope.lineSeries = data.lineSeries;
+        $scope.lineDataChart = data.lineData;
+        
+        $scope.pieDataChart = data.pieData;
+        $scope.pieLabels = data.pieLabels;
+        
+        $scope.barDataChart = data.barData;
+        $scope.barLabels = data.barLabels;
+        $scope.barSeries = data.barSeries;
     });
     
     $scope.cardsActive = [
         { name: 'Grafiek Line', classcard: 'result-', url: 'views/cards/cardResultLine.html' },
-        { name: 'Grafiek Pie', classcard: 'result-', url: 'views/cards/cardResultPie.html' }
+        { name: 'Grafiek Pie', classcard: 'result-', url: 'views/cards/cardResultPie.html' },
+        { name: 'Grafiek Bar', classcard: 'result-', url: 'views/cards/cardResultBar.html' }
     ];
-    
-    // SELECTIE VAN CARDS
-    $scope.cards =
-        [
-            { name: 'Grafiek Line', classcard: 'result-', url: 'views/cards/cardResultLine.html' },
-            { name: 'Grafiek Klein', classcard: 'result-half-', url: 'views/cards/cardResult2.html' },
-            { name: 'Grafiek Pie', classcard: 'result-', url: 'views/cards/cardResultPie.html' }
-        ];
     
     // VOEG CARD TOE AAN HOME
     $scope.addCard = function ($index) {
@@ -36,14 +41,5 @@ app.controller('dashboardController', ['$scope', 'content',  function ($scope, c
         }
     };
     
-    $scope.lineLabels = ["Januari", "Februari", "Maart", "April", "Mei", "Juni", "Juli"];
-    $scope.lineSeries = ['Stress', 'Oefeningen'];
-    $scope.lineDataChart = [
-        [65, 59, 80, 81, 56, 55, 40],
-        [28, 48, 40, 19, 86, 27, 90]
-    ];
-    
-    $scope.pieLabels = ["Kalm", "Walging", "Woede"];
-    $scope.pieDataChart = [100, 400, 600];
     
 }]);

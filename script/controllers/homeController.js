@@ -1,34 +1,38 @@
 /*global app, data, d3, console, confirm, $*/
 
-app.controller('homeController', ['$scope', 'content',  function ($scope, content) {
+app.controller('homeController', ['$scope', 'cards', 'testData',  function ($scope, cards, testData) {
     "use strict";
-    content.success(function (data) {
-        $scope.content = data;
+    cards.success(function (data) {
+        $scope.cards = data.cards;
     });
+    testData.success(function (data) {
+        $scope.lineLabels = data.lineLabels;
+        $scope.lineSeries = data.lineSeries;
+        $scope.lineDataChart = data.lineData;
+        
+        $scope.pieDataChart = data.pieData;
+        $scope.pieLabels = data.pieLabels;
+        
+        $scope.barDataChart = data.barData;
+        $scope.barLabels = data.barLabels;
+        $scope.barSeries = data.barSeries;
+    });
+    
     
     // ACTIEVE CARDS
     $scope.cardsActive = [
-        { name: 'Test', classcard: 'test-', url: 'views/cards/cardTest.html' },
-        { name: 'Grafiek', classcard: 'result-', url: 'views/cards/cardResultLine.html' },
-        { name: 'Oefening', classcard: 'oefening-', url: 'views/cards/cardExercise.html' }
+        { name: 'Test', classcard: 'test-', url: 'views/cards/cardTest.html', active: true },
+        { name: 'Grafiek', classcard: 'result-', url: 'views/cards/cardResultLine.html', active: true },
+        { name: 'Oefening', classcard: 'oefening-', url: 'views/cards/cardExercise.html', active: true }
     ];
-    
-    // SELECTIE VAN CARDS
-    $scope.cards =
-        [
-            { name: 'Test', classcard: 'test-', url: 'views/cards/cardTest.html' },
-            { name: 'Info', classcard: 'info-', url: 'views/cards/cardInfo.html' },
-            { name: 'Info Klein', classcard: 'info-half-', url: 'views/cards/cardInfo2.html' },
-            { name: 'Oefening', classcard: 'oefening-', url: 'views/cards/cardExercise.html' },
-            { name: 'Grafiek', classcard: 'result-', url: 'views/cards/cardResult.html' },
-            { name: 'Grafiek Klein', classcard: 'result-half-', url: 'views/cards/cardResult2.html' }
-        ];
+
     
     // VOEG CARD TOE AAN HOME
     $scope.addCard = function ($index) {
         $scope.cardsActive.push($scope.cards[$index]);
         console.log($scope.cardsActive);
     };
+    
     
     // VERWIJDER CARD VAN HOME
     $scope.removeCard = function ($index) {
@@ -41,13 +45,4 @@ app.controller('homeController', ['$scope', 'content',  function ($scope, conten
         }
     };
     
-    $scope.lineLabels = ["Januari", "Februari", "Maart", "April", "Mei", "Juni", "Juli"];
-    $scope.lineSeries = ['Stress', 'Oefeningen'];
-    $scope.lineDataChart = [
-        [65, 59, 80, 81, 56, 55, 40],
-        [28, 48, 40, 19, 86, 27, 90]
-    ];
-    $scope.colours = [{
-        fillColor: '#00baff'
-    }];
 }]);

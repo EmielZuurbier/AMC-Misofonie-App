@@ -21,9 +21,9 @@ app.config(function ($routeProvider) {
             controller: 'oefeningenController',
             templateUrl: 'views/page-excercise.html'
         })
-        .when('/info', {
-            controller: 'infoController',
-            templateUrl: 'views/page-info.html'
+        .when('/bibliotheek', {
+            controller: 'bibliotheekController',
+            templateUrl: 'views/page-bibliotheek.html'
         })
         .when('/community', {
             controller: 'communityController',

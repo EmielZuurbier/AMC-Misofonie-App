@@ -506,6 +506,11 @@ main.open {
     font-size: 1em;
 }
 
+.card-header.blue {
+    background-color: #00baff;
+    color: #f9f9f9;
+}
+
 .card-header p, .card-header h2, .card-header h3, .card-header h4 {
     display: inline-block;
     color: inherit;
