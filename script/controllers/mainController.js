@@ -5,6 +5,7 @@ app.controller('mainController', ['$scope', 'cards', 'testData', '$routeParams',
     
     $scope.cardsActive = cards.cardsActive;
     $scope.cards = cards.cardsAll;
+    $scope.cardsProfiel = cards.cardsProfiel;
     
     $scope.cardOefeningen = cards.cardOefeningen;
     $scope.cardOefeningenId = cards.cardOefeningen[$routeParams.id];
@@ -25,6 +26,7 @@ app.controller('mainController', ['$scope', 'cards', 'testData', '$routeParams',
     
     $scope.addOefening = function (id) {
         $scope.cardsActive.push($scope.cardOefeningenId);
+        $scope.cardsProfiel.push($scope.cardOefeningenId);
         console.log($scope.cardsActive);
     };
     

@@ -44,6 +44,10 @@ app.factory('cards', ['$http', function ($http) {
             { name: "Staaf Diagram", classcard: "result-", id: "7", url: "views/cards/cardResultBar.html", category: "Graph" }
         ],
         
+        cardsProfiel: [
+            
+        ],
+        
         cardOefeningen: [
             { name: "Racket Oefening", classcard: "oefening-", desc: "Lorum ipsum dolor amet bla bla bla sausage", likes: "2", category: "Oefening", url: "views/cards/oefeningen/racket.html" },
             { name: "Relaxatie Geluiden", classcard: "oefening-", desc: "Lorum ipsum dolor amet bla bla bla sausage", likes: "2", category: "Oefening", url: "views/cards/oefeningen/relaxatie.html" },
