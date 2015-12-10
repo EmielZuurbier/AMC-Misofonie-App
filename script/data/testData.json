@@ -1,49 +1,25 @@
 {
-    "lineLabels": 
+    "amiLabels": 
     [
-        "Januari",
-        "Februari", 
-        "Maart", 
-        "April", 
-        "Mei", 
-        "Juni", 
-        "Juli"
+        "Vraag 1",
+        "Vraag 2", 
+        "Vraag 3", 
+        "Vraag 4", 
+        "Vraag 5"
     ],
     
-    "lineSeries": 
+    "amiSeries": 
     [
-        "Stress",
-        "Oefeningen"
+        "Amisos Nieuw",
+        "Amisos Oud"
     ],
     
-    "lineData":
+    "amiData":
     [
-        [65, 59, 80, 81, 56, 55, 40],
-        [28, 48, 40, 19, 86, 27, 90]
+        [3, 3, 2, 4, 3],
+        [5, 4, 5, 3, 2]
     ],
     
-    "barData":
-    [
-        [65, 59, 80, 81, 56, 55, 40],
-        [28, 48, 40, 19, 86, 27, 90]
-    ],
-    
-    "barLabels": 
-    [
-        "Januari",
-        "Februari", 
-        "Maart", 
-        "April", 
-        "Mei", 
-        "Juni", 
-        "Juli"
-    ],
-    
-    "barSeries": 
-    [
-        "Stress",
-        "Oefeningen"
-    ],
     
     "pieData":
     [

@@ -1,4 +1,4 @@
-/*global angular*/
+/*global angular, $rootScope*/
 
 var app = angular.module('misofonieApp', ['ngRoute', 'ngAnimate', 'ngTouch', 'chart.js']);
 
@@ -6,34 +6,34 @@ app.config(function ($routeProvider) {
     "use strict";
     $routeProvider
         .when('/', {
-            controller: 'homeController',
+            controller: 'mainController',
             templateUrl: 'views/page-home.html'
         })
         .when('/test', {
-            controller: 'testController',
+            controller: 'mainController',
             templateUrl: 'views/page-test.html'
         })
         .when('/dashboard', {
-            controller: 'dashboardController',
+            controller: 'mainController',
             templateUrl: 'views/page-dashboard.html'
         })
         .when('/oefeningen', {
-            controller: 'oefeningenController',
+            controller: 'mainController',
             templateUrl: 'views/page-excercise.html'
         })
         .when('/bibliotheek', {
-            controller: 'bibliotheekController',
+            controller: 'mainController',
             templateUrl: 'views/page-bibliotheek.html'
         })
-        .when('/community', {
-            controller: 'communityController',
-            templateUrl: 'views/page-community.html'
-        })
         .when('/instellingen', {
-            controller: 'instellingenController',
+            controller: 'mainController',
             templateUrl: 'views/page-settings.html'
         })
         .otherwise({
             redirectTo: '/'
         });
 });
+
+
+
+
