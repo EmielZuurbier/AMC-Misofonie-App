@@ -26,7 +26,7 @@ app.config(function ($routeProvider) {
             templateUrl: 'views/page-bibliotheek.html'
         })
         .when('/bibliotheek/:id', {
-            controller: 'oefeningController',
+            controller: 'mainController',
             templateUrl: 'views/page-excercise.html'
         })
         .when('/instellingen', {

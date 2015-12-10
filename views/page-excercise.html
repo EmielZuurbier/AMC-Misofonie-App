@@ -2,24 +2,10 @@
     <div class="row">
         <div class="col-md-12">
             
+            <div data-ng-include="cardOefeningenId.url"></div>
             <div class="card">
-                <div class="card-header">
-                    <h2><i class="fa fa-medkit"></i> Oefeningen</h2>
-                </div>
                 <div class="card-body">
-                    <img class="img-responsive" src="http://placehold.it/500x250"/>
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h2> {{ cardOefeningen.name }}</h2>
-                </div>
-                <div class="card-body card-padding">
-                    <p> {{ cardOefeningen.desc }} </p>
-                </div>
-                <div class="card-footer">
-                    <a href="#info" type="button" class="btn btn-block">Lees meer</a>
+                    <button data-ng-click="addOefening({{$index}})" class="btn btn-block"> Voeg toe aan Home </button>
                 </div>
             </div>
             
