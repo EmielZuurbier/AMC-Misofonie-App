@@ -31,7 +31,7 @@ app.factory('cards', ['$http', function ($http) {
         cardsActive: [
             { name: "Stress test", classcard: "test-", id: "1", url: "views/cards/cardTest.html", category: "Test" },
             { name: "Lijn Diagram", classcard: "result-", id: "5", url: "views/cards/cardResultLine.html", category: "Graph" },
-            { name: "Oefening", classcard: "oefening-", id: "4", url: "views/cards/cardExercise.html", category: "Oefening" }
+            { name: "Video Oefening", classcard: "oefening-", desc: "Lorum ipsum dolor amet bla bla bla sausage", likes: "2", category: "Oefening", url: "views/cards/oefeningen/video.html" }
         ],
         
         cardsAll: [
@@ -44,14 +44,18 @@ app.factory('cards', ['$http', function ($http) {
             { name: "Staaf Diagram", classcard: "result-", id: "7", url: "views/cards/cardResultBar.html", category: "Graph" }
         ],
         
+        cardsProfiel: [
+            
+        ],
+        
         cardOefeningen: [
-            { name: "Oefening 1", desc: "Lorum ipsum dolor amet bla bla bla sausage", likes: "2" },
-            { name: "Oefening 2", desc: "Lorum ipsum dolor amet bla bla bla sausage", likes: "2" },
-            { name: "Oefening 3", desc: "Lorum ipsum dolor amet bla bla bla sausage", likes: "2" },
-            { name: "Oefening 4", desc: "Lorum ipsum dolor amet bla bla bla sausage", likes: "2" },
-            { name: "Oefening 5", desc: "Lorum ipsum dolor amet bla bla bla sausage", likes: "2" },
-            { name: "Oefening 6", desc: "Lorum ipsum dolor amet bla bla bla sausage", likes: "2" },
-            { name: "Oefening 7", desc: "Lorum ipsum dolor amet bla bla bla sausage", likes: "2" }
+            { name: "Racket Oefening", classcard: "oefening-", desc: "Lorum ipsum dolor amet bla bla bla sausage", likes: "2", category: "Oefening", url: "views/cards/oefeningen/racket.html" },
+            { name: "Relaxatie Geluiden", classcard: "oefening-", desc: "Lorum ipsum dolor amet bla bla bla sausage", likes: "2", category: "Oefening", url: "views/cards/oefeningen/relaxatie.html" },
+            { name: "Ontspannings Oefening", classcard: "oefening-",  desc: "Lorum ipsum dolor amet bla bla bla sausage", likes: "2", category: "Oefening", url: "views/cards/oefeningen/ontspanning.html" },
+            { name: "Video Oefening", classcard: "oefening-", desc: "Lorum ipsum dolor amet bla bla bla sausage", likes: "2", category: "Oefening", url: "views/cards/oefeningen/video.html" },
+            { name: "Beweging Oefening", classcard: "oefening-", desc: "Lorum ipsum dolor amet bla bla bla sausage", likes: "2", category: "Oefening", url: "views/cards/oefeningen/beweging.html" },
+            { name: "Concentratie Oefening", classcard: "oefening-", desc: "Lorum ipsum dolor amet bla bla bla sausage", likes: "2", category: "Oefening", url: "views/cards/oefeningen/concentratie.html" },
+            { name: "Laxatie Oefeningen", classcard: "oefening-", desc: "Lorum ipsum dolor amet bla bla bla sausage", likes: "2", category: "Oefening", url: "views/cards/oefeningen/laxatie.html" }
         ],
         
         amiLabels:

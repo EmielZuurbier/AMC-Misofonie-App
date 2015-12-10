@@ -1,12 +1,15 @@
 /*global app, data, d3, console, confirm, $*/
 
-app.controller('mainController', ['$scope', 'cards', 'testData',  function ($scope, cards, testData) {
+app.controller('mainController', ['$scope', 'cards', 'testData', '$routeParams',  function ($scope, cards, testData, $routeParams) {
     "use strict";
     
     $scope.cardsActive = cards.cardsActive;
     $scope.cards = cards.cardsAll;
+    $scope.cardsProfiel = cards.cardsProfiel;
     
     $scope.cardOefeningen = cards.cardOefeningen;
+    $scope.cardOefeningenId = cards.cardOefeningen[$routeParams.id];
+
     
     $scope.amiLabels = cards.amiLabels;
     $scope.amiSeries = cards.amiSeries;
@@ -18,6 +21,12 @@ app.controller('mainController', ['$scope', 'cards', 'testData',  function ($sco
     // VOEG CARD TOE AAN PAGE
     $scope.addCard = function (id) {
         $scope.cardsActive.push($scope.cards[id]);
+        console.log($scope.cardsActive);
+    };
+    
+    $scope.addOefening = function (id) {
+        $scope.cardsActive.push($scope.cardOefeningenId);
+        $scope.cardsProfiel.push($scope.cardOefeningenId);
         console.log($scope.cardsActive);
     };
     
