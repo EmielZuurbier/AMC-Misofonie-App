@@ -1,68 +1,11 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <div class="card">
-                <div class="card-header">
-                    <h2><i class="fa fa-heartbeat"></i> Test je stress</h2>
-                    <a class="card-ellips" href="javascript:void()"><i class="fa fa-ellipsis-v"></i></a>
-                </div>
-                <div class="card-body">
-                    <a href="#test" type="button" class="btn btn-block btn-tall">Start de test</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <h2><i class="fa fa-area-chart"></i> Resultaten</h2>
-                    <a class="card-ellips" href="javascript:void()"><i class="fa fa-ellipsis-v"></i></a>
-                </div>
-                <div class="card-body">
-                    <div id="graph"></div>
-                </div>
-            </div>
             
-            <div class="card-left">
-                <div class="card-header">
-                    <h2><i class="fa fa-stethoscope"></i> Oefening</h2>
-                    <a class="card-ellips" href="javascript:void()"><i class="fa fa-ellipsis-v"></i></a>
-                </div>
-                <div class="card-body card-padding">
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
-                </div>
-                <div class="card-footer">
-                    <a href="#oefeningen" type="button" class="btn btn-block">Begin oefeningen</a>
-                </div>
-            </div>
-            
-            <div class="card-right">
-                <div class="card-header">
-                    <h2><i class="fa fa-chain-broken"></i> Wist je?</h2>
-                    <a class="card-ellips" href="javascript:void()"><i class="fa fa-ellipsis-v"></i></a>
-                </div>
-                <div class="card-body card-padding">
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
-                </div>
-                <div class="card-footer">
-                    <a href="#info" type="button" class="btn btn-block">Lees meer</a>
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h2><i class="fa fa-user-md"></i> Card</h2>
-                    <a class="card-ellips" href="javascript:void()"><i class="fa fa-ellipsis-v"></i></a>
-                </div>
-                <div class="card-body card-padding">
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
-                    <p>Nulla consequat massa quis enim.</p>
-                </div>
-            </div>
-            
-            
-            <div data-ng-repeat="card in cardsActive track by $index">
+            <!-- REPEAT CARDSACTIVE -->
+            <div class="card-view" data-ng-repeat="card in cardsActive track by $index" >
                 <div data-ng-include="card.url"></div>
             </div>
-            
             
         </div>
     </div>
@@ -70,10 +13,18 @@
 
 <div class="context-button">
     <div data-ng-click="contextShow=!contextShow" class="context-button-icon">
-        <i class="fa fa-plus"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" width="94px" height="94px" viewBox="0 0 94 94" version="1.1">
+            <!-- Generator: Sketch 3.4.3 (16618) - http://www.bohemiancoding.com/sketch -->
+            <defs/>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                <path d="M94,40.2857143 L53.7142857,40.2857143 L53.7142857,0 L40.2857143,0 L40.2857143,40.2857143 L0,40.2857143 L0,53.7142857 L40.2857143,53.7142857 L40.2857143,94 L53.7142857,94 L53.7142857,53.7142857 L94,53.7142857 L94,40.2857143 L94,40.2857143 Z" id="Shape" fill="#FFFFFF" sketch:type="MSShapeGroup"/>
+            </g>
+        </svg>
     </div>
     <ul data-ng-show="contextShow" class="context-button-option" >
-        <li data-ng-repeat="card in cards"><button data-ng-click="addCard({{$index}})" data-ng-class="{{ card.name }}button">{{ card.name }}</button></li>
+        <li data-ng-repeat="card in cards">
+            <button data-ng-click="addCard({{$index}})" data-ng-class="{{ card.classcard }}button">{{ card.name }}</button>
+        </li>
     </ul>
 </div>
 

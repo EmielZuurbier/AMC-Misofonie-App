@@ -2,43 +2,79 @@
     <div class="row">
         <div class="col-md-12">
             
+            <div class="card">
+                <div class="card-header blue">
+                    <h2>Amisos</h2>
+                </div>
+            </div>
+            
             <progress value="1" max="3"></progress>
             
-            <div class="card">
-                <div class="card-header">
-                    <h2><i class="fa fa-clock-o"></i> Vraag 1</h2>
-                    <h3>Hoeveel tijd bent u per dag kwijt aan (gedachten over) de geluiden?</h3>
+            <form role="form">
+                <div class="card">
+                    <div class="card-header">
+                        <h2><i class="fa fa-clock-o"></i> Vraag 1</h2>
+                        <h3>Hoeveel tijd bent u per dag kwijt aan (gedachten over) de geluiden?</h3>
+                    </div>
+                    <div class="card-body card-padding">
+                        <input type="range" min="1" max="5" list="ticks">
+                        <datalist id="ticks">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </datalist>
+                    </div>
                 </div>
-                <div class="card-body card-padding">
-                    <form role="form">
-                        <input type="range" min="0" max="4">
-                    </form>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h2><i class="fa fa-volume-up"></i> Vraag 2</h2>
+                        <h3>In welke mate bent u gefocust op de geluiden?</h3>
+                    </div>
+                    <div class="card-body card-padding">
+                        <input type="range" min="1" max="5" list="ticks">
+                    </div>
                 </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h2><i class="fa fa-volume-up"></i> Vraag 2</h2>
-                    <h3>In welke mate bent u gefocust op de geluiden?</h3>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h2><i class="fa fa-microphone-slash"></i> Vraag 3</h2>
+                        <h3>In welke mate ervaart u hinder bij het horen van de geluiden?</h3>
+                    </div>
+                    <div class="card-body card-padding">
+                        <input type="range" min="1" max="5" list="ticks">
+                    </div>
                 </div>
-                <div class="card-body card-padding">
-                    <form role="form">
-                        <input type="range" min="0" max="4">
-                    </form>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h2><i class="fa fa-microphone-slash"></i> Vraag 4</h2>
+                        <h3>Hoeveel moeite heeft u de afgelopen week gedaan om uw aandacht te richten op iets anders dan misofoniegeluiden?</h3>
+                    </div>
+                    <div class="card-body card-padding">
+                        <input type="range" min="1" max="5" list="ticks">
+                    </div>
                 </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h2><i class="fa fa-microphone-slash"></i> Vraag 3</h2>
-                    <h3>In welke mate ervaart u hinder bij het horen van de geluiden?</h3>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h2><i class="fa fa-microphone-slash"></i> Vraag 5</h2>
+                        <h3>In welke mate slaagde u de afgelopen week er in om uw aandacht te richten op iets anders dan misofoniegeluiden?</h3>
+                    </div>
+                    <div class="card-body card-padding">
+                        <input type="range" min="1" max="5" list="ticks">
+                    </div>
                 </div>
-                <div class="card-body card-padding">
-                    <form role="form">
-                        <input type="range" min="0" max="4">
-                    </form>
+                
+                <div class="card">
+                    <div class="card-body">
+                        <button type="submit" class="btn btn-block btn-tall">Verzend</button>
+                    </div>
                 </div>
-            </div>
+                
+            </form>
             
         </div>
     </div>

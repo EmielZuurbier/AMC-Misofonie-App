@@ -4,13 +4,23 @@
             
             <div class="card">
                 <div class="card-header blue">
-                    <h2>Dashboard</h2>
+                    <h2>Bibliotheek</h2>
                 </div>
             </div>
             
             <!-- REPEAT CARDSACTIVE -->
-            <div class="card-view" data-ng-repeat="card in cardsActive | filter: { category: 'Graph' } track by card.id" >
-                <div data-ng-include="card.url"></div>
+            <div class="card-view" data-ng-repeat="card in cardOefeningen track by $index" >
+                <div class="card">
+                    <a href="#/bibliotheek/{{$index}}">
+                        <div class="card-header">
+                            <h4> {{ card.name }} </h4>
+                        </div>
+                        <div class="card-body card-padding">
+                            <p> {{ card.desc }} </p>
+                            <p><i class="fa fa-heart"></i> {{ card.likes }} </p>
+                        </div>
+                    </a>
+                </div>
             </div>
             
         </div>
@@ -28,8 +38,8 @@
         </svg>
     </div>
     <ul data-ng-show="contextShow" class="context-button-option" >
-        <li data-ng-repeat="card in cards | filter: { category: 'Graph' } track by card.id">
-            <button data-ng-click="addCard({{card.id}})" data-ng-class="{{ card.classcard }}button">{{ card.name }}</button>
+        <li data-ng-repeat="card in cards | filter: { category: 'Oefening' }">
+            <button data-ng-click="addCard({{$index}})" data-ng-class="{{ card.classcard }}button">{{ card.name }}</button>
         </li>
     </ul>
 </div>
