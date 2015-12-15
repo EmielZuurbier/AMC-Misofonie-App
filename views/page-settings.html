@@ -38,57 +38,51 @@
                     <div class="card-body card-padding">
                         <h4>Algemeen</h4>
                         <fieldset>
-                            <div class="form-float-left">
-                                <p>Ik heb zelf misofonie</p>
-                            </div>
-                            <div class="form-float-right">
-                                <div class="onoffswitch">
-                                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-                                    <label class="onoffswitch-label" for="myonoffswitch"></label>
-                                </div>
-                            </div>
+                            <md-switch data-ng-model="setting.x" aria-label="Switch 1">
+                                Ik heb zelf misofonie
+                            </md-switch>
                         </fieldset>
-                        <h4>Voorkeuren</h4>
-                        <h5>Vergeleken met anderen ben ik gevoelig voor:</h5>
-                        <fieldset>
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="eetgeluiden"> Eetgeluiden</label>
-                            </div>
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="nasalegeluiden"> Nasale geluiden</label>
-                            </div>
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="keelgeluiden"> Keelgeluiden</label>
-                            </div>
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="klankgeluiden"> Bepaalde klanken</label>
-                            </div>
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="tikgeluiden"> Herhaaldelijk tikken</label>
-                            </div>
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="geritselgeluiden"> Geritsel</label>
-                            </div>
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="Omgevingsgeluiden"> Omgevingsgeluiden</label>
-                            </div>
+                        <h4 data-ng-show="setting.x">Voorkeuren</h4>
+                        <h5 data-ng-show="setting.x">Vergeleken met anderen ben ik gevoelig voor:</h5>
+                        <fieldset data-ng-show="setting.x">
+                            <md-checkbox data-ng-model="setting.a" aria-label="Checkbox 1">
+                                Eetgeluiden
+                            </md-checkbox>
+                            <md-checkbox data-ng-model="setting.b" aria-label="Checkbox 1">
+                                Nasale Geluiden
+                            </md-checkbox>
+                            <md-checkbox data-ng-model="setting.c" aria-label="Checkbox 1">
+                                Keelgeluiden
+                            </md-checkbox>
+                            <md-checkbox data-ng-model="setting.d" aria-label="Checkbox 1">
+                                Bepaalde Klanken
+                            </md-checkbox>
+                            <md-checkbox data-ng-model="setting.e" aria-label="Checkbox 1">
+                                Herhaaldelijke Tikken
+                            </md-checkbox>
+                            <md-checkbox data-ng-model="setting.f" aria-label="Checkbox 1">
+                                Geritsel
+                            </md-checkbox>
+                            <md-checkbox data-ng-model="setting.g" aria-label="Checkbox 1">
+                                Omgevingsgeluiden
+                            </md-checkbox>
                         </fieldset>
                         <br>
-                        <h5>Welke emoties roepen deze geluiden bij u op?</h5>
-                        <fieldset>
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="eetgeluiden"> Irritatie</label>
-                            </div>
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="nasalegeluiden"> Woede</label>
-                            </div>
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="keelgeluiden"> Walging</label>
-                            </div>
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="klankgeluiden"> Anders, namelijk:</label>
-                                <textarea class="form-control" rows="5" id="comment"></textarea>
-                            </div>
+                        <h5 data-ng-show="setting.x">Welke emoties roepen deze geluiden bij u op?</h5>
+                        <fieldset data-ng-show="setting.x">
+                            <md-checkbox data-ng-model="setting.h" aria-label="Checkbox 1">
+                                Irritatie
+                            </md-checkbox>
+                            <md-checkbox data-ng-model="setting.i" aria-label="Checkbox 1">
+                                Woede
+                            </md-checkbox>
+                            <md-checkbox data-ng-model="setting.j" aria-label="Checkbox 1">
+                                Walging
+                            </md-checkbox>
+                            <md-checkbox data-ng-model="setting.k" aria-label="Checkbox 1">
+                                Anders, namelijk:
+                            </md-checkbox>
+                            <textarea data-ng-show="setting.k" class="form-control" rows="5" id="comment"></textarea>
                         </fieldset>
                     </div>
                 </div>
@@ -99,47 +93,36 @@
                     <div class="card-body card-padding">
                         <h4>Hoe vaak wilt u de volgende testen uitvoeren?</h4>
                         <fieldset>
-                            <div class="form-group">
-                                <div class="form-float-left">
-                                    <label for="sel1">Amisos</label>
-                                </div>
-                                <div class="form-float-right">
-                                    <select class="form-control" id="sel1">
-                                        <option>Dagelijks</option>
-                                        <option>Wekelijks</option>
-                                        <option selected="selected">Maandelijks</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="form-float-left">
-                                    <label for="sel2">Moodmeter</label>
-                                </div>
-                                <div class="form-float-right">
-                                    <select class="form-control" id="sel2">
-                                        <option>3x per dag</option>
-                                        <option>2x per dag</option>
-                                        <option selected="selected">Dagelijks</option>
-                                        <option>Wekelijks</option>
-                                        <option>Maandelijks</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="form-float-left">
-                                    <label>Mag het AMC gebruik maken van uw gegevens?</label>
-                                </div>
-                                <div class="form-float-right">
-                                    <div class="onoffswitch">
-                                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-                                        <label class="onoffswitch-label" for="myonoffswitch"></label>
-                                    </div>
-                                </div>
-                            </div>
+                            <md-input-container>
+                                <label>Amisos</label>
+                                <md-select data-ng-model="setting.l">
+                                    <md-option value="Dagelijks">Dagelijks</md-option>
+                                    <md-option value="Wekelijks">Wekelijks</md-option>
+                                    <md-option value="Maandelijks">Maandelijks</md-option>
+                                </md-select>
+                            </md-input-container>
+                            <md-input-container>
+                                <label>MoodMeter</label>
+                                <md-select data-ng-model="setting.m">
+                                    <md-option value="3x per dag">3x per dag</md-option>
+                                    <md-option value="2x per dag">2x per dag</md-option>
+                                    <md-option value="Dagelijks">Dagelijks</md-option>
+                                    <md-option value="Wekelijks">Wekelijks</md-option>
+                                    <md-option value="Maandelijks">Maandelijks</md-option>
+                                </md-select>
+                            </md-input-container>
+                            <md-switch data-ng-model="setting.n" aria-label="Switch 1">
+                                Mag het AMC gebruik<br> maken van uw gegevens?
+                            </md-switch>
                         </fieldset>
                     </div>
                     <div class="card-footer">
-                        <button type="submit" class="btn btn-block">Opslaan</button>
+                       
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                         <button type="submit" class="btn btn-block">Opslaan</button>
                     </div>
                 </div>
             </form> 

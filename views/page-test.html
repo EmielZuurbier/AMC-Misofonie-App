@@ -8,16 +8,15 @@
                 </div>
             </div>
             
-            <progress value="1" max="3"></progress>
-            
             <form role="form">
+                
                 <div class="card">
                     <div class="card-header">
                         <h2><i class="fa fa-clock-o"></i> Vraag 1</h2>
                         <h3>Hoeveel tijd bent u per dag kwijt aan (gedachten over) de geluiden?</h3>
                     </div>
                     <div class="card-body card-padding">
-                        <input type="range" min="1" max="5" list="ticks">
+                        <md-slider md-discrete aria-label="Amisos test" data-ng-model="dataN.a" data-ng-init="dataN.a = '2'" min="0" max="4" ></md-slider>
                         <datalist id="ticks">
                             <option>1</option>
                             <option>2</option>
@@ -34,7 +33,7 @@
                         <h3>In welke mate bent u gefocust op de geluiden?</h3>
                     </div>
                     <div class="card-body card-padding">
-                        <input type="range" min="1" max="5" list="ticks">
+                        <md-slider md-discrete aria-label="Amisos test" data-ng-model="dataN.b" data-ng-init="dataN.b = '2'" min="0" max="4"></md-slider>
                     </div>
                 </div>
 
@@ -44,7 +43,7 @@
                         <h3>In welke mate ervaart u hinder bij het horen van de geluiden?</h3>
                     </div>
                     <div class="card-body card-padding">
-                        <input type="range" min="1" max="5" list="ticks">
+                        <md-slider md-discrete aria-label="Amisos test" data-ng-model="dataN.c" data-ng-init="dataN.c = '2'" min="0" max="4"></md-slider>
                     </div>
                 </div>
 
@@ -54,7 +53,7 @@
                         <h3>Hoeveel moeite heeft u de afgelopen week gedaan om uw aandacht te richten op iets anders dan misofoniegeluiden?</h3>
                     </div>
                     <div class="card-body card-padding">
-                        <input type="range" min="1" max="5" list="ticks">
+                        <md-slider md-discrete aria-label="Amisos test" data-ng-model="dataN.d" data-ng-init="dataN.d = '2'" min="0" max="4"></md-slider>
                     </div>
                 </div>
 
@@ -64,13 +63,13 @@
                         <h3>In welke mate slaagde u de afgelopen week er in om uw aandacht te richten op iets anders dan misofoniegeluiden?</h3>
                     </div>
                     <div class="card-body card-padding">
-                        <input type="range" min="1" max="5" list="ticks">
+                        <md-slider md-discrete aria-label="Amisos test" data-ng-model="dataN.e" data-ng-init="dataN.e = '2'" min="0" max="4"></md-slider>
                     </div>
                 </div>
                 
                 <div class="card">
                     <div class="card-body">
-                        <button type="submit" class="btn btn-block btn-tall">Verzend</button>
+                        <input type="submit" class="btn btn-block btn-tall" value="Klaar" data-ng-click="updateNewAmiData(dataN)">
                     </div>
                 </div>
                 

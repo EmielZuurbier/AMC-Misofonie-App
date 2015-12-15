@@ -1,11 +1,11 @@
 <div class="card">
     <div class="card-header">
-        <h2><i class="fa fa-bar-chart"></i> Resultaten</h2>
+        <h2><i class="fa fa-bar-chart"></i> Resultaten Amisos</h2>
         <a class="card-ellips" href="javascript:void(0)" data-ng-click="removeCard($index)"><i class="fa fa-ellipsis-v"></i></a>
     </div>
-    <div class="card-body">
+    <div class="card-body card-padding">
         <canvas id="bar" class="chart chart-bar"
-  chart-data="amiData" chart-labels="amiLabels" chart-series="amiSeries"
+  chart-data="bar.data" chart-labels="bar.labels" chart-series="bar.series" chart-colours="bar.colours" chart-legend="true"
         </canvas>
     </div>
 </div>

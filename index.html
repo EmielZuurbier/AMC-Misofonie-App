@@ -7,60 +7,60 @@
         <meta name="author" content="Emiel Zuurbier, Sjoerd Roders, Jelle Bot">
         <meta name="description" content="App voor Misofonie">
         <meta name="mobile-web-app-capable" content="yes">
-        <meta name="app-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-capable" content="yes">
-
         <!-- STYLESHEETS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>   <!-- BOOTSTRAP -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/> <!-- FONT AWESOME -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/> 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css"/>
-        <link rel="stylesheet" href="script/angular-chart.js/dist/angular-chart.min.css"/>                      <!-- CHART -->
+        <link rel="stylesheet" href="script/angular-chart.js/dist/angular-chart.min.css"/>                      
+        <link rel="stylesheet" href="style/angular-material.css"/>
         <link rel="stylesheet" href="style/style.css"/>
-        <link rel="stylesheet" href="style/profiel.css"/>                                                         <!-- STYLESHEET -->
+        <link rel="stylesheet" href="style/profiel.css"/>
+        <link rel="icon" href="media/MisofoMeicon2.svg">
     </head>
     
     <body data-ng-app="misofonieApp">
-        
-        <nav>                                                                                                   <!-- NAV -->
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="nav-header">
-                        <p class="nav-header-name">Sjoerd Roders</p>
+        <div data-ng-controller="mainController">
+            
+            <nav data-ng-show="navOpen">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="nav-header">
+                            <p class="nav-header-name">Jan Hertogh</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="nav-list">
+                            <ul>
+                                <li><a data-ng-click="navOpen=!navOpen; go('/')" href="#/"><i class="fa fa-home"></i> Home</a></li>
+                                <li><a data-ng-click="navOpen=!navOpen; go('/test')" href="#test"><i class="fa fa-stethoscope"></i> Amisos</a></li>
+                                <li><a data-ng-click="navOpen=!navOpen; go('/bibliotheek')" href="#bibliotheek"><i class="fa fa-puzzle-piece"></i> Oefeningen</a></li>
+                                <li><a data-ng-click="navOpen=!navOpen; go('/dashboard')" href="#dashboard"><i class="fa fa-area-chart"></i> Dashboard</a></li>
+                                <li style="display: none;"><a href="#community" href="#community"><i class="fa fa-comment"></i> Community</a></li>
+                                <li><a data-ng-click="navOpen=!navOpen; go('/instellingen')" href="#instellingen"><i class="fa fa-gear"></i> Instellingen</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="nav-list">
-                        <ul>
-                            <li><a href="#/"><i class="fa fa-home"></i> Home</a></li>
-                            <li><a href="#test"><i class="fa fa-stethoscope"></i> Amisos</a></li>
-                            <li><a href="#bibliotheek"><i class="fa fa-book"></i> Bibliotheek</a></li>
-                            <li><a href="#dashboard"><i class="fa fa-area-chart"></i> Dashboard</a></li>
-                            <li><a href="#community"><i class="fa fa-comment"></i> Community</a></li>
-                            <li><a href="#instellingen"><i class="fa fa-gear"></i> Instellingen</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        
-        <header class="header">
-            <div id="nav-button">
-                <div id="nav-icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-            <div id="settings-button">
-                <a href="#instellingen"><i class="fa fa-cog"></i></a>
-            </div>
-        </header>
-        
-        <main>                                                                                                  <!-- MAIN -->
-            <div data-ng-view class="view"></div>                                                               <!-- VIEW CONTAINER -->
-        </main>
-        
+            </nav>
 
+            <header class="header">
+                <div id="nav-button" data-ng-click="navOpen=!navOpen">
+                    <div id="nav-icon" data-ng-class="{'open': navOpen}">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                
+                <div id="settings-button">
+                    <a href="#instellingen"><i class="fa fa-cog"></i></a>
+                </div>
+            </header>
+            
+            <main data-ng-view class="view" data-ng-class="{'open': navOpen}"></main>
+            
+        </div>
         
         <!-- SCRIPTS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.js"></script>                  <!-- JQUERY -->
@@ -72,6 +72,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-touch.min.js"></script>    <!-- ANGULAR TOUCH -->
         <script src="script/Chart.js/Chart.js"></script>   
         <script src="script/angular-chart.js/dist/angular-chart.min.js"></script>                               <!-- ANGULAR CHART -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.js"></script> <!-- ANG MATERIAL -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>              <!-- GREENSOCK -->
         <!-- ANGULAR MODULES -->
         <script src="script/app.js"></script>                                                                   <!-- MAIN MODULE -->
@@ -79,11 +81,8 @@
         <script src="script/services/service.js"></script>                                                      <!-- DATA SERVICE -->
         <!-- ANGULAR CONTROLLERS -->
         <script src="script/controllers/mainController.js"></script>                                            <!-- MAIN CONTROLLER -->
-        
         <script src="script/animation.js"></script>                                                             <!-- ANIMATION SCRIPT -->
-        
         <script src="script/script.js"></script>                                                                <!-- CUSTOM SCRIPT -->
-        
     </body>
     
 </html>

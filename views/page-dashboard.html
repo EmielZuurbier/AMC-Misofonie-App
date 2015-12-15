@@ -9,7 +9,7 @@
             </div>
             
             <!-- REPEAT CARDSACTIVE -->
-            <div class="card-view" data-ng-repeat="card in cards | filter: { category: 'Graph' } track by card.id" >
+            <div class="card-view" data-ng-repeat="card in cardsGraph track by card.id" >
                 <div data-ng-include="card.url"></div>
             </div>
             

@@ -17,6 +17,11 @@ Leden
 Changelog
 -----------
 
+15-12-2015  
+- Testresults
+- Pagesettings
+- Added Angular Material elements
+
 09-12-2015  
 - New card templates
 - Chart.js implemented
